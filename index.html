@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potroom</title>
+
+    <link rel="stylesheet" href="src/CSS/style.css">         <!-- geting CSS files-->
+    <link rel="shortcut icon" href="src/img/logo.png">       <!--logo img-->
+
+</head>
+
+
+<body>
+
+    <div class="body">
+
+        <div class="container">
+        
+         <h1 class="h1c">Potroom</h1>
+         <h1 class="h2c">Dobrodosli u Potroom</h1>
+
+            
+         <div class="taskbar">
+            <a class="taskbar-home" href="index.html">
+                <img src="src/img/potroom logo.png" alt="home logo">
+            </a>
+            <div class="taskbar-links">
+                <a href="gallery.html">gallery</a>
+                <a href="album.html">album</a>
+                <a href="videospot.html">video spot</a>
+                <a href="logo.html">logo</a>
+                <a href="contacts.html">contacts</a>
+            </div>
+         </div>
+         <br>
+         <div class="col50">
+                <div class="card">
+                <h2 class="gallery-title" style="font-size: 40px;">Projekt Iz multImedIja</h2>
+                    <p>Za projekt iz navedenog kolegija odabrao sam izraditi funkcionalnu web stranicu za postojeći bend u kojemu se nalazim.</p>
+                    <p>Namjena stranice jest simulirati pravu stranicu glazbenog benda u stilu 2000-ih godina, sa svim elementima koje bi ovakva stranica trebala sadržavati.</p>
+                    <p>Stranicu sam odlučio napisati u HTML-u i CSS-u zbog veće praktičnosti i slobode pri izradi proizvoda. </p>
+                    <p>Ovu temu odabrao sam jer me zanima izrada stranica vezanih uz glazbu, a u ovome projektu vidio sam dobru priliku za ozbiljan projekt koji bih mogao nastaviti razvijati i izvan fakulteta. </p>
+                    <p>Kroz sadržaj stranice su prikazani postupci uređivanja videa i slika, izrada vektorske grafike u obliku loga za bend te izrada i obrada muzike. </p>
+                </div>
+         </div>
+         
+
+         <div class="col30-wrapper">
+            <div class="side-action-card">             
+                <h2 class="gallery-title">NovI album</h2>
+                <p>Provjeri najnovije izdanje benda i otkrij priču iza albuma.</p>
+                <a class="side-action-btn" href="album.html">Novi album</a>
+            </div>
+
+            <div class="side-action-card">
+                <h2 class="gallery-title">Život je sranje</h2>
+                <p>Najpoznatija pjesma Život je sranje spremna je za slušanje.</p>
+                <button class="side-action-btn" id="ksd-play-button" type="button" data-play-text="Play Život je sranje" data-pause-text="Pauziraj Život je sranje">Play Život je sranje</button>
+                <audio id="ksd-audio" src="src/music/ZivOtJeSranje.wav"></audio>
+            </div>
+
+            <div class="side-action-card">
+                <h2 class="gallery-title">Nove slIKe</h2>
+                <p>Skrolaj do novih fotografija i backstage sadržaja.</p>
+                <a class="side-action-btn" href="gallery.html#novi-fotografi">NOve slike</a>
+            </div>
+
+            <div class="side-action-card">
+                <h2 class="gallery-title">SpotIfy</h2>
+                <p>Slusaj više i prati Potroom na Spotifyju.</p>
+                <a class="side-action-btn" href="https://open.spotify.com/artist/0JVwoIfylA2fq3kVVGiJwn?si=L_94nJRoRoeHm6Tqv0diew" target="_blank" rel="noopener">Spotify</a>
+            </div>
+         </div>
+             
+    </div>
+
+
+
+
+<script>
+    const ksdButton = document.getElementById('ksd-play-button');
+    const ksdAudio = document.getElementById('ksd-audio');
+
+    if (ksdButton && ksdAudio) {
+        const playText = ksdButton.dataset.playText || 'Play KSD';
+        const pauseText = ksdButton.dataset.pauseText || 'Pauziraj KSD';
+
+        ksdButton.addEventListener('click', () => {
+            if (ksdAudio.paused) {
+                ksdAudio.play();
+                ksdButton.textContent = pauseText;
+                ksdButton.classList.add('active');
+            } else {
+                ksdAudio.pause();
+                ksdButton.textContent = playText;
+                ksdButton.classList.remove('active');
+            }
+        });
+
+        ksdAudio.addEventListener('ended', () => {
+            ksdButton.textContent = playText;
+            ksdButton.classList.remove('active');
+        });
+    }
+</script>
+</body>
+</html>
