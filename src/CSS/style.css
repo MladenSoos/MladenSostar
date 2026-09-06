@@ -22,7 +22,7 @@
 
 }
 body {
-    background: url("../img/pozadina.jpg");
+    background: url("../img/opaka.jpg");
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -197,6 +197,261 @@ h2 {
    background: linear-gradient(135deg, rgba(255, 230, 2, 0.95), rgba(255, 140, 0, 0.95));
 }
 
+.home-modules {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.home-module {
+    padding: 1.15rem;
+    background: rgba(0, 0, 0, 0.82);
+    border: 1px solid rgba(244, 223, 33, 0.45);
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.home-module-label,
+.concert-date {
+    color: rgb(244, 223, 33);
+    font-family: "Main_Style";
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+}
+
+.concert-date {
+    font-family: "Main_Style_Normal";
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    -webkit-text-stroke-width: 0.7px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.home-module h2 {
+    margin: 0.45rem 0;
+    font-size: 1.35rem;
+}
+
+.home-module p {
+    color: rgb(220, 220, 220);
+    font-size: 0.98rem;
+    line-height: 1.45;
+}
+
+.home-feature-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.home-project-card {
+    margin-top: 1.25rem;
+}
+
+.home-feature-button {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+     font-size: 0.98rem;
+    padding: 0.7rem 0.9rem;
+    background: linear-gradient(135deg, rgba(185, 49, 49, 0.95), rgba(101, 20, 20, 0.95));
+    border: 2px solid rgba(244, 223, 33, 0.85);
+    border-radius: 10px;
+    color: rgb(244, 223, 33);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-feature-button:hover {
+    transform: translate(2px, 2px);
+    background: linear-gradient(135deg, rgba(209, 64, 64, 0.98), rgba(124, 25, 25, 0.98));
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+}
+
+.home-feature-button span {
+    font-family: "Main_Style";
+    font-size: 1.25rem;
+    -webkit-text-stroke-width: 0.8px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.home-feature-button small {
+    font-size: 0.78rem;
+}
+
+.contacts-page .home-feature-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contacts-page .home-feature-button {
+    min-height: 110px;
+    justify-content: center;
+    padding: 1rem;
+    border-width: 3px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.85);
+}
+
+.contacts-page .home-feature-button span {
+    font-size: 1.5rem;
+}
+
+.contacts-page .home-feature-button small {
+    font-size: 0.88rem;
+}
+
+.contacts-page .home-feature-button:nth-child(1) {
+    background: linear-gradient(135deg, rgba(185, 49, 49, 0.98), rgba(101, 20, 20, 0.98));
+}
+
+.contacts-page .home-feature-button:nth-child(2) {
+    background: linear-gradient(135deg, rgba(244, 223, 33, 0.95), rgba(177, 122, 10, 0.98));
+    color: rgb(0, 0, 0);
+}
+
+.contacts-page .home-feature-button:nth-child(3) {
+    background: rgb(0, 0, 0);
+    color: rgb(244, 223, 33);
+}
+
+.contacts-page .home-feature-button:hover {
+    transform: translate(2px, 2px) scale(1.02);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.85);
+}
+
+.contacts-footer {
+    clear: both;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1.25rem;
+    background: rgba(0, 0, 0, 0.88);
+    border-top: 3px solid rgba(244, 223, 33, 0.75);
+    border-bottom: 1px solid rgba(244, 223, 33, 0.35);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.contacts-footer-block {
+    min-height: 120px;
+    padding: 0.9rem;
+    background: rgba(185, 49, 49, 0.2);
+    border-left: 2px solid rgba(244, 223, 33, 0.6);
+}
+
+.contacts-footer-block h2 {
+    margin: 0.4rem 0;
+    font-size: 1.25rem;
+}
+
+.contacts-footer-block p {
+    color: rgb(220, 220, 220);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.contacts-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: 0.75rem;
+}
+
+.contacts-footer-links a {
+    padding: 0.35rem 0.55rem;
+    color: rgb(244, 223, 33);
+    border: 1px solid rgba(244, 223, 33, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    font-family: "Main_Style";
+    font-size: 0.82rem;
+}
+
+.concert-board {
+    clear: both;
+    margin-top: 0;
+    padding: 1.75rem;
+    background: rgba(0, 0, 0, 0.82);
+    border: 2px solid rgba(244, 223, 33, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.concert-board-gap {
+    clear: both;
+    height: 2rem;
+}
+
+.concert-board-heading {
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.concert-board-heading h2 {
+    margin: 0.35rem 0;
+    font-size: 2rem;
+}
+
+.concert-board-heading p,
+.concert-entry p {
+    color: rgb(220, 220, 220);
+    line-height: 1.45;
+}
+
+.concert-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.concert-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 0.35rem minmax(110px, 0.45fr);
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem 1.25rem;
+    background: rgba(185, 49, 49, 0.18);
+    border-top: 1px solid rgba(244, 223, 33, 0.35);
+    border-bottom: 1px solid rgba(244, 223, 33, 0.35);
+}
+
+.concert-place h3 {
+    margin-bottom: 0.35rem;
+}
+
+.concert-divider {
+    width: 0.35rem;
+    height: 4rem;
+    justify-self: center;
+    background: rgba(244, 223, 33, 0.75);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.concert-entry h3 {
+    color: rgb(255, 230, 2);
+    font-family: "Main_Style";
+    font-size: 1.2rem;
+    margin-bottom: 0.35rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.concert-entry p {
+    font-size: 0.98rem;
+}
+
+.concert-upcoming {
+    background: rgba(244, 223, 33, 0.12);
+}
+
 .track-list {
     list-style: none;
     margin-top: 1rem;
@@ -308,6 +563,16 @@ audio {
     border-radius: 16px;
 }
 
+.album-process-footer {
+    clear: both;
+    margin-top: 1rem;
+    padding-top: 1.25rem;
+}
+
+.album-process-footer .progress-story {
+    margin-top: 0;
+}
+
 .progress-story h2 {
     margin: 0 0 1rem;
     font-family: "Main_Style";
@@ -351,14 +616,14 @@ audio {
 
 .progress-story-extra {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
     margin-top: 1rem;
 }
 
 .progress-story-extra {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
     margin-top: 1rem;
 }
@@ -366,7 +631,7 @@ audio {
 .progress-story-extra img,
 .progress-story-card.progress-story-image-large img {
     width: 100%;
-    height: 240px;
+    height: 280px;
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -405,6 +670,31 @@ audio {
     height: auto;
     display: block;
     border-radius: 16px;
+}
+
+.logo-page .image-modal-content {
+    width: min(70vw, 900px);
+    max-width: 70vw;
+    max-height: 75vh;
+    padding: 0.75rem;
+}
+
+.logo-page .image-modal-content img {
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.video-page .image-modal-content {
+    width: min(94vw, 1200px);
+    max-width: 94vw;
+    max-height: 92vh;
+    padding: 0.75rem;
+}
+
+.video-page .image-modal-content img {
+    width: 100%;
+    max-height: 88vh;
+    object-fit: contain;
 }
 
 .image-modal-close {
@@ -497,6 +787,18 @@ audio {
         grid-template-columns: 1fr;
     }
 
+    .home-modules,
+    .concert-list,
+    .contacts-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .concert-entry {
+        grid-template-columns: minmax(0, 1fr) 0.35rem auto;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
     .col65,
     .col30-wrapper,
     .col50 {
@@ -509,6 +811,10 @@ audio {
     .photo-placeholder-grid,
     .gallery {
         grid-template-columns: 1fr;
+    }
+
+    div.gallery {
+        column-count: 1;
     }
 
     .col30-wrapper {
@@ -552,7 +858,7 @@ audio {
     border-radius: 18px;                            /*        WRAPER  ZA EDITS                             */
     width: 30%;                                     /*                                    */
     float: right;                                   /*                                    */
-    margin-right: 3rem;                             /*                                    */
+    margin-right: 0;                                /*                                    */
     box-shadow: 0 4px 12px rgba(0,0,0,0.35);              
 }
 
@@ -780,18 +1086,18 @@ audio {
 
 
 div.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 1rem;
-  padding: 0.5rem 0;
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 0.5rem 0;
 }
 
 div.gallery-item {
   background: #121212;
   border: 4px solid rgba(244, 223, 33, 0.85);
-  width: calc(50% - 0.5rem);
-  min-width: 280px;
+    width: 100%;
+    margin: 0 0 1rem;
+    break-inside: avoid;
+    height: auto;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 15px 30px rgba(0, 0, 0, 0.45);
@@ -806,9 +1112,23 @@ div.gallery-item:hover {
 
 div.gallery-item img {
   width: 100%;
-  height: auto;
+    height: auto;
   display: block;
   border-bottom: 4px solid #000;
+}
+
+.gallery-page .image-modal-content {
+        width: auto;
+        max-width: 92vw;
+        max-height: 82vh;
+        padding: 0.75rem;
+}
+
+.gallery-page .image-modal-content img {
+        width: auto;
+        max-width: 90vw;
+        max-height: 78vh;
+        object-fit: contain;
 }
 
 .logo-process-block {
@@ -929,3 +1249,82 @@ div.gallery-item div.desc {
  
 
 
+
+
+.album-portal {
+    margin-top: 0;
+    padding: 1.25rem;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.92), rgba(72, 12, 12, 0.92));
+    border: 2px solid rgba(244, 223, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.72);
+}
+
+.album-portal-header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(244, 223, 33, 0.35);
+}
+
+.album-portal-header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid rgb(244, 223, 33);
+    border-radius: 8px;
+}
+
+.album-portal-header h2 {
+    margin: 0.3rem 0;
+    font-size: 1.85rem;
+}
+
+.album-portal-header p {
+    color: rgb(220, 220, 220);
+    font-size: 0.92rem;
+}
+
+.album-portal .home-modules {
+    margin-top: 1rem;
+}
+
+.album-portal .home-feature-links {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 2560px) {
+    .container {
+    width: 60%;
+    margin: auto;
+    background-color: brown;
+}
+.col65 {
+        width: 64%;
+        margin-left: 1rem;
+    }
+
+    .col30-wrapper {
+        width: 30%;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .container {
+    width: 80%;
+    margin: auto;
+    background-color: brown;
+}
+.col65 {
+        width: 64%;
+        margin-left: 1rem;
+    }
+
+    .col30-wrapper {
+        width: 30%;
+        margin-right: 1rem;
+    }
+}
