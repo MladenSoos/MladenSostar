@@ -9,11 +9,10 @@
     <link rel="shortcut icon" href="src/img/logo.png">
 </head>
 
-<body>
+<body class="logo-page">
     <div class="body">
         <div class="container">
             <h1 class="h1c">Potroom logo</h1>
-            <h1 class="h2c">Kakoje logo napravljen</h1>
 
             <div class="taskbar">
                 <a class="taskbar-home" href="index.html">
@@ -21,7 +20,7 @@
                 </a>
                 <div class="taskbar-links">
                     <a href="gallery.html">gallery</a>
-                    <a href="album.html">album</a>
+                    <a href="album.html">KratkI spoj</a>
                     <a href="videospot.html">video spot</a>
                     <a href="logo.html">logo</a>
                     <a href="contacts.html">contacts</a>
@@ -35,19 +34,19 @@
                     </div>
 
                     <div class="card">
-                        <p>ovdje mozete vidjeti proces izrade loga za Potroom i njegov finalan dizajn.<br>
-                           Kao ideja i inspiracija za logo benda bili su bendovi iz 80-ih i 90-ih godina poput KISS, SEX PISTOLS, THE CLASH i tkao dalje.<br>
-                           Logo se sastoji od crne pozadine u kojoj se nalazi zvijezda žute boje koja ima texturu na sebi te ime benda koji izlazi iz nje</p>
+                        <p>Ovdje možete vidjeti proces izrade loga za Potroom i njegov finalan dizajn.<br>
+                           Kao ideja i inspiracija za logo benda bili su bendovi između 80-ih i 90-ih godina poput KISS, SEX PISTOLS, THE CLASH i tako dalje.<br>
+                           Logo se sastoji od crne pozadine u kojoj se nalazi zvijezda žute boje koja ima texturu na sebi te ime benda koji izlazi iz navedene zvijezde.</p>
                     </div>
 
                     <div class="logo-process-block">
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/logo1.png">
-                                <img src="src/img/logo1.png" alt="Prva verzija loga">
+                            <a href="src/img/logo1.png">
+                                <img class="zoomable-image" src="src/img/logo1.png" alt="Prva verzija loga">
                             </a>
                         </div>
                         <div class="logo-process-text">
-                            <h3>1. ideja i odabir velicine</h3>
+                            <h3>1. ideja i odabir veličine</h3>
                             <p>Prvo sam napravio u paint referencu kako sam zamislio svoj logo i dodao ga u inksapce kako bi imao bolji uvid u ideju bez da ulazim i izlazim iz aplikacije.<br>
                                Nakon toga sam odabrao velicinu pozadina u kojoj ce se nalaziti logo.</p>
                         </div>
@@ -61,21 +60,21 @@
                             </p>
                         </div>
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/logo2.png">
-                                <img src="src/img/logo2.png" alt="Druga verzija loga">
+                            <a href="src/img/logo2.png">
+                                <img class="zoomable-image" src="src/img/logo2.png" alt="Druga verzija loga">
                             </a>
                         </div>
                     </div>
 
                     <div class="logo-process-block">
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/logo3.png">
-                                <img src="src/img/logo3.png" alt="Treća verzija loga">
+                            <a href="src/img/logo3.png">
+                                <img class="zoomable-image" src="src/img/logo3.png" alt="Treća verzija loga">
                             </a>
                         </div>
                         <div class="logo-process-text">
                             <h3>3. Dodavanje teksture</h3>
-                            <p>U ovom dijelu faze sam odabrao texturu koju sam pronasao na internetu i tuime sam je dodao u inksapce kako bi je moagao preslikatina zvijezdu.</p>
+                            <p>U ovom dijelu faze sam odabrao texturu koju sam pronašao na internetu i time sam je dodao u inksapce kako bi je moagao preslikati na zvijezdu.</p>
                         </div>
                     </div>
 
@@ -87,16 +86,16 @@
                             </p>
                         </div>
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/loho4.png">
-                                <img src="src/img/loho4.png" alt="Četvrta verzija loga">
+                            <a href="src/img/loho4.png">
+                                <img class="zoomable-image" src="src/img/loho4.png" alt="Četvrta verzija loga">
                             </a>
                         </div>
                     </div>
 
                     <div class="logo-process-block">
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/logo5.png">
-                                <img src="src/img/logo5.png" alt="Peta verzija loga">
+                            <a href="src/img/logo5.png">
+                                <img class="zoomable-image" src="src/img/logo5.png" alt="Peta verzija loga">
                             </a>
                         </div>
                         <div class="logo-process-text">
@@ -114,8 +113,8 @@
                             <p>Za konačni dizajn loga, prilagodio sam sve elemente (nijanse boja, uzorak, ime benda) kako bi se osiguralo da on izgleda profesionalno i da ističe karakter benda.</p>
                         </div>
                         <div class="logo-process-image">
-                            <a target="_blank" href="src/img/potroom logo.png">
-                                <img src="src/img/potroom logo.png" alt="Finalni Potroom logo">
+                            <a href="src/img/potroom logo.png">
+                            <img class="zoomable-image" src="src/img/potroom logo.png" alt="Finalni Potroom logo">
                             </a>
                         </div>
                     </div>
@@ -154,6 +153,39 @@
     </div>
 
     <script>
+       
+
+        if (ksdButton && ksdAudio) {
+            const playText = ksdButton.dataset.playText || 'Play KSD';
+            const pauseText = ksdButton.dataset.pauseText || 'Pauziraj KSD';
+
+            ksdButton.addEventListener('click', () => {
+                if (ksdAudio.paused) {
+                    ksdAudio.play();
+                    ksdButton.textContent = pauseText;
+                    ksdButton.classList.add('active');
+                } else {
+                    ksdAudio.pause();
+                    ksdButton.textContent = playText;
+                    ksdButton.classList.remove('active');
+                }
+            });
+
+            ksdAudio.addEventListener('ended', () => {
+                ksdButton.textContent = playText;
+                ksdButton.classList.remove('active');
+            });
+        }
+    </script>
+    <div id="image-modal" class="image-modal">
+        <div class="image-modal-backdrop"></div>
+        <div class="image-modal-content">
+            <button class="image-modal-close" type="button">×</button>
+            <img src="" alt="Povećana slika">
+        </div>
+    </div>
+
+    <script>
         const ksdButton = document.getElementById('ksd-play-button');
         const ksdAudio = document.getElementById('ksd-audio');
 
@@ -179,5 +211,43 @@
             });
         }
     </script>
+
+    <script>
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = imageModal ? imageModal.querySelector('img') : null;
+        const closeButton = imageModal ? imageModal.querySelector('.image-modal-close') : null;
+
+        document.querySelectorAll('.zoomable-image').forEach(image => {
+            image.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (modalImage) {
+                    modalImage.src = image.src;
+                    modalImage.alt = image.alt;
+                    imageModal.style.display = 'flex';
+                }
+            });
+        });
+
+        if (closeButton && imageModal) {
+            closeButton.addEventListener('click', () => {
+                imageModal.style.display = 'none';
+                if (modalImage) {
+                    modalImage.src = '';
+                }
+            });
+        }
+
+        if (imageModal) {
+            imageModal.addEventListener('click', (event) => {
+                if (event.target === imageModal || event.target.classList.contains('image-modal-backdrop')) {
+                    imageModal.style.display = 'none';
+                    if (modalImage) {
+                        modalImage.src = '';
+                    }
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
